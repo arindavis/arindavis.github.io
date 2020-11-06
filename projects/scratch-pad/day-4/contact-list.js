@@ -78,7 +78,8 @@ function makeContactList() {
             contacts.splice(contact); 
         },
         printAllContactNames: function(){
-            
+            for (let i = 0; i < contacts.length; i++) {
+                console.log(contacts[i]);
         }
     }
 }
@@ -95,4 +96,5 @@ if((typeof process !== 'undefined') &&
     // here, export any references you need for tests //
     module.exports.makeContact = makeContact;
     module.exports.makeContactList = makeContactList;
+}
 }
