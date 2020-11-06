@@ -23,7 +23,27 @@
  */
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
-    
+//creating an array to put all our values into
+var depository = [];
+//starting a simple if/else statment, first determining if the start number is smaller than the end number
+  if(start < end) {
+     //if it is, count from the start to the end in increments of 1
+     for(var i = start; i <= end; i++){
+    //for every iteration, add i to the depository
+      depository.push(i);
+      
+     }
+     //if the above is false, check if the end is smaller than the start
+  }else if(end < start)
+  //if it is, count from the end to the start decreasing in increments of 1
+      for(var i = start; i >= end; i--){
+    //for every iteration, push i into the depository array
+        depository.push(i);
+        
+      } 
+    return depository;
+      
+
     
     
     

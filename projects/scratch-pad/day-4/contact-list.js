@@ -35,25 +35,53 @@
 
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
-
+//make contact should return an object filled with contact info
+    
+    return {
+        id: id,
+        nameFirst: nameFirst,
+        nameLast: nameLast,
+    };
 } 
 
+    
 
 function makeContactList() {
     /*
      * You need something here to hold contacts. See length api for a hint:
      */
-    var contacts;
+    var contacts = [];
     
     return {
         // we implemented the length api for you //
         length: function() {
             return contacts.length;
+        }, 
+        addContact: function(contact){
+            contacts.push(contact);
+        },
+        findContact: function(fullName){
+        //a loop that will loop through our contacts array, iterating over each object
+        for (let i = 0; i < contacts.length; i++) {
+        //if fullName is strictly eqaul to the first name value and the last name value joined together
+            if (fullName === contacts[i].firstName + " " + contacts[i].lastName){
+        //return that contact object
+                return contacts[i];
+        //otherwise, return undefined
+        }else{
+        return undefined;
+          }
+        }
+        },
+        removeContact: function(contact){
+            //delete the input from an object. 
+            contacts.splice(contact); 
+        },
+        printAllContactNames: function(){
+            
         }
     }
 }
-
-
 
 
 // YOUR CODE GOES ABOVE HERE //

@@ -12,7 +12,11 @@
  */
 function printArrayValues(array) {
   // YOUR CODE BELOW HERE //
-  
+//a simple loop that starts at 0 and ends at the length of the array, each iteration adding one
+  for(var i = 0; i < array.length; i++) {
+  //logging our result to the console
+    console.log(array[i]);
+  }
   
   
   
@@ -25,7 +29,11 @@ function printArrayValues(array) {
  */
 function printArrayValuesInReverse(array) {
   // YOUR CODE BELOW HERE //
-  
+//simple for loop that starts at the length of the array, ends at zero and iterates down one
+  for ( var i = array.length - 1; i >= 0; i--) {
+  //logging results
+    console.log(array[i]);
+  }
   
   
   
@@ -37,7 +45,8 @@ function printArrayValuesInReverse(array) {
  */
 function getObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-  
+//a simple return statement that will return the keys of an object as an array
+  return(Object.keys(object));
   
   
   
@@ -50,6 +59,15 @@ function getObjectKeys(object) {
  */
 function printObjectKeys(object) {
   // YOUR CODE BELOW HERE //
+//the creation of a variable 'keys' that will store our keys from an object
+  var keys = Object.keys(object);
+//a loop deisgned to start at 0, end at the length of the keys and iterate once
+  for (var i = 0; i < keys.length; i++) {
+//logging results
+  console.log(keys[i]);
+  }
+  
+  
   
   
   
@@ -62,7 +80,8 @@ function printObjectKeys(object) {
  */
 function getObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
+//not dissimiliar to the keys line, this simple return statement will return only our object values
+  return(Object.values(object));
   
   
   
@@ -75,7 +94,12 @@ function getObjectValues(object) {
  */
 function printObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
+//creation of values variable that will store the object values as array
+  var values = Object.values(object);
+//for loop that will iterate once and, start at 0 and end at the values given length
+  for (var i = 0; i < values.length; i++) {
+  console.log(values[i]);
+  }
   
   
   
@@ -87,6 +111,10 @@ function printObjectValues(object) {
  */
 function getObjectLength(object) {
   // YOUR CODE BELOW HERE //
+//variable that is doing double work. it is turnin gour object keys into an array and then logging the length of that array
+  var keyLength = Object.keys(object).length;
+//returning our results
+  return(keyLength);
   
   
   
@@ -100,9 +128,13 @@ function getObjectLength(object) {
  */
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
-  
-  
-  
+//creating a variable that will hold an array of our object values
+  var values = Object.values(object);
+//a simple for loop designed to iterate backwards over our values array, stopping at zero and starting at the end
+ for (var i = values.length - 1; i >= 0; i--) {
+//logging our results to the console
+    console.log(values[i]);
+  } 
   
   // YOUR CODE ABOVE HERE //
 }

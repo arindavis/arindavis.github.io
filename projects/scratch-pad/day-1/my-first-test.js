@@ -17,12 +17,11 @@
  */
 function print(value) {
   // YOUR CODE BELOW HERE //
-  
-  
+  // a function that will log the given value into the console
+  console.log(value);
   
   // YOUR CODE ABOVE HERE //
 }
-
 
 
 

@@ -14,7 +14,8 @@
  */
 function length(string) {
     // YOUR CODE BELOW HERE //
-    
+    // when i call on this function, it will return the given string's length
+    return string.length;
 
 
     // YOUR CODE ABOVE HERE //
@@ -25,7 +26,8 @@ function length(string) {
  */
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
-
+    // when i call on this function, it will return the given string in all lowercase
+    return string.toLowerCase();
 
 
     // YOUR CODE ABOVE HERE //
@@ -36,7 +38,8 @@ function toLowerCase(string) {
  */
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
-
+    // when i call on this function, it will return the given string in all uppercase
+    return string.toUpperCase();
 
 
     // YOUR CODE ABOVE HERE //
@@ -57,8 +60,12 @@ function toUpperCase(string) {
  */
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
-
-
+    // create an array with strings separated by a space
+    let arr = string.split(" ");
+    // create string joining the array with dashes
+    let joinString = arr.join("-");
+    
+    return joinString.toLowerCase();
 
     // YOUR CODE ABOVE HERE //
 }
@@ -77,7 +84,13 @@ function toDashCase(string) {
  */
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
+    // if the first letter of a string, when uppercased, is strictly the same as the given character when uppercased, then---
+if (string.toUpperCase()[0]  === char.toUpperCase()) {
+// return the result as "true", otherwise, return "false"
+    return true;
+} else {
+    return false;
+}
     
 
     // YOUR CODE ABOVE HERE //
@@ -97,7 +110,14 @@ function beginsWith(string, char) {
  */
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
+    //if the last letter of the given string, when uppercased, is the same as the given character when uppercased, then--
+   if (string[string.length-1].toUpperCase() === char.toUpperCase()) {
+//return "true", otherwise return "false"
+    return true;
+} else {
+    return false;
+}
+   
 
 
     // YOUR CODE ABOVE HERE //
@@ -110,7 +130,8 @@ function endsWith(string, char) {
  */
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+//return the first and second given strings, but added together. 
+    return stringOne + stringTwo;
 
 
     // YOUR CODE ABOVE HERE //
@@ -128,8 +149,11 @@ function concat(stringOne, stringTwo) {
  */
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-    var args = Array.from(arguments);
-
+//create a variable called args, which will store an array based on the user's arguments
+var args = Array.from(arguments);
+//creating new variable that will store all of the args array, but joined together. then returning it at the end. 
+  let joinedStrings = args.join("");
+  return joinedStrings;
 
     // YOUR CODE ABOVE HERE //
 }
@@ -145,7 +169,17 @@ function join(stringOne, stringTwo) {
  */
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
+    //if the first string is longer than the second string, return it
+    if (stringOne.length > stringTwo.length){
+        return stringOne;
+    //if the second string is larger than the first string, return it
+    } else if (stringTwo.length > stringOne.length){
+        return stringTwo;
+    }
 
+        
+    
+    
 
 
     // YOUR CODE ABOVE HERE //
@@ -160,7 +194,16 @@ function longest(stringOne, stringTwo) {
  */
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+    // if stringOne is higher than stringTwo return 1
+    if(stringTwo > stringOne){
+        return 1;
+     // if stringTwo is higher than stringOne return -1
+    } else if(stringOne > stringTwo){
+        return -1;
+     // if stringTwo is equal to stringOne return 0
+    } else {
+        return 0;
+    }
 
 
     // YOUR CODE ABOVE HERE //
@@ -176,7 +219,16 @@ function sortAscending(stringOne, stringTwo) {
  */
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+    // if string two is less than string one, return 1
+    if(stringTwo < stringOne){
+        return 1;
+     // if stringTwo is higher than stringOne return -1
+    } else if(stringOne < stringTwo){
+        return -1;
+     // if stringTwo is equal to stringOne return 0
+    } else {
+        return 0;
+    }
 
 
 

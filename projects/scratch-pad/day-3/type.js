@@ -14,6 +14,22 @@
  */
 function isArray(value) {
     // YOUR CODE BELOW HERE //
+    //if it's an array return true
+    if(Array.isArray(value)) {
+        return true;
+    //if it is null return false
+    }else if(value === null){
+        return false;
+    //if it is a date, return false
+    } else if (value instanceof Date){
+        return false;
+    //otherwise, if the value is strictly equal to object then return false
+    } else if(typeof value === "object"){
+        return false;
+    } else {
+    //return false for strings numbers and booleans
+        return false;
+    }
     
     
     
@@ -31,9 +47,22 @@ function isArray(value) {
  */
 function isObject(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
+    //if it's an array return false
+    if(Array.isArray(value)) {
+        return false;
+    //if it is null return false
+    }else if(value === null){
+        return false;
+    //if it is a date, return false
+    } else if(value instanceof Date){
+        return false;
+    //otherwise, if the value is strictly equal to object then return true
+    } else if(typeof value === "object"){
+        return true;
+    } else {
+    //return false for strings numbers and booleans
+        return false;
+    }
     
     // YOUR CODE ABOVE HERE //
 }
@@ -46,6 +75,22 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
+        //if it's an array return true
+    if(Array.isArray(value)) {
+        return true;
+    //if it is null return false
+    }else if(value === null){
+        return false;
+    //if it is a date, return false
+    } else if(value instanceof Date){
+        return false;
+    //otherwise, if the value is strictly equal to object then return true
+    } else if(typeof value === "object"){
+        return true;
+    } else {
+    //return false for strings numbers and booleans
+        return false;
+    }
     
     
     
@@ -74,6 +119,31 @@ function isCollection(value) {
  */ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
+    //if it's an array return array
+    if(Array.isArray(value)) {
+        return "array";
+    //if it is null return null
+    }else if(value === null){
+        return "null";
+    //if it is a date, return date
+    }else if(value instanceof Date){
+        return "date";
+    //otherwise, if the value is strictly equal to object then return object, and so on and soforth for the remainding data types
+    }else if(typeof value === "object"){
+        return "object";
+    }else if(typeof value === "boolean"){
+        return "boolean";
+    }else if(typeof value === "number"){
+        return "number";
+    }else if(typeof value === "string"){
+        return "string";
+    }else if(typeof value === "function"){
+        return "function";
+    } else {
+    //return undefined for everything else
+        return undefined;
+    }
+    
     
     
     
