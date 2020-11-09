@@ -58,29 +58,45 @@ function makeContactList() {
             return contacts.length;
         }, 
         addContact: function(contact){
+            //will push our given contact to the end of our contacts array. 
             contacts.push(contact);
         },
         findContact: function(fullName){
-        //a loop that will loop through our contacts array, iterating over each object
-        for (let i = 0; i < contacts.length; i++) {
-        //if fullName is strictly eqaul to the first name value and the last name value joined together
-            if (fullName === contacts[i].firstName + " " + contacts[i].lastName){
-        //return that contact object
-                return contacts[i];
-        //otherwise, return undefined
-        }else{
-        return undefined;
-          }
-        }
+        //for loop that will iterate the contacts array of objects
+        
+            for(var i = 0; i < contacts.length; i++){
+        //, looking to see if the given full name strictly equals the first name and last name of a given contacts obect seperated by a space. 
+               if(fullName === contacts[i].nameFirst + " " + contacts[i].nameLast) {
+        // if it does, return that specific iteration. 
+                   return contacts[i];
+               } 
+            } //otherwise, return undefined. 
+            return undefined;
         },
         removeContact: function(contact){
-            //delete the input from an object. 
-            contacts.splice(contact); 
+        //a for loop that will iterate over our contacts array of objects
+            for(var i = 0; i < contacts.length; i++){
+        //right here, it is checking to see if the ID's match between our iteration and the current contact ID. 
+               if(contact.id === contacts[i].id){
+        //if the above results true, then remove the given contact
+                   contacts.splice(i, 1);
+               } 
+            } 
         },
         printAllContactNames: function(){
+        //creating a place to store all of our strings
+            var stringOfStrings = "";
+        //a for loop that will iterate over our contact array of objects
             for (let i = 0; i < contacts.length; i++) {
-                console.log(contacts[i]);
-        }
+        //for each iteration, add the first and last name of this iteration to string of strings, seperated by a space.
+                stringOfStrings += contacts[i].nameFirst + " " + contacts[i].nameLast;
+        //if the iteration hasn't finished, ie for every iteration, please add a line break after our first name last name pairs.
+                if(i < contacts.length - 1) {
+                    stringOfStrings += "\n";
+                }
+            } //last but not least, return our stringOfstrings. 
+            return stringOfStrings;
+        } 
     }
 }
 
@@ -96,5 +112,4 @@ if((typeof process !== 'undefined') &&
     // here, export any references you need for tests //
     module.exports.makeContact = makeContact;
     module.exports.makeContactList = makeContactList;
-}
 }
