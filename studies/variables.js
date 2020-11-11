@@ -116,6 +116,9 @@ console.log(numbers);//--> Type Error: Assignment to Constant Variable//
 * let is actually more similar to const. 
 * 
 * Let's Talk scope. 
+* 
+* Now we are gonna cover some of this in more depth in the functions section, but
+* try and think of scope in terms of variables for now. 
 *
 * Var is generally for variabes that need to be available within the scope of an entire  
 * function. We call this "function scope".
