@@ -107,7 +107,7 @@ console.log(numbers);//--> Type Error: Assignment to Constant Variable//
  
 /* Still with me? Good. Because there's more. 
 *
-*So. Much. More.
+* So. Much. More.
 *
 * Let's talk let. 
 * 

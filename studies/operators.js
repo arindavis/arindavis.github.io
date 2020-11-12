@@ -12,7 +12,7 @@
 
 *
 * Arithmetic operators -  Operator used for math stuff.
-* + addition
+* +  addition
 * - subtraction
 * * multiplication
 * / division

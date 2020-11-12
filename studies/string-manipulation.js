@@ -90,7 +90,23 @@ var string6 = "Please respect all authority";
 var replaceString = string6.replace("respect", "question");
 console.log(replaceString);//--> please question all authority
 /*
-* And those are just 7! There are plenty more where that came from. 
+* And those are just 7 of the darn things! There are plenty more where that came from. 
 *
+*
+*toLowerCase(): a method for turning every letter of a string lowercase. 
+*/
+var string7 = "cAn yOU rEaD tHIs nOw?"
+var lowerCaseString = string7.toLowerCase(string7);
+console.log(lowerCaseString); //--> "can you read this now?";
+/*
+*toUpperCase(): the exact same as toLowerCase, only it deals in uppercase. 
+*/
+string7.toUpperCase();//--> "CAN YOU READ THIS NOW?"
+/*
+* Which brings me to my last point. The primary way to call all of
+* these methods is exactly what I did for that last one there. 
+* Simply use dot notation after a string's name, then slap on
+* those closed parenthesis. Or use them to pass in the string 
+* that way, they're both possible. You do you. 
 */
 

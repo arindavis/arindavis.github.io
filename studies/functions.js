@@ -57,6 +57,9 @@ tellMeImPretty();//--> "You're Pretty"
 let variableFunctionHybrid = function() {
     return "You're doing it, peter! You're assigning functions to variables!";
 };
+console.log(variableFunctionHybrid); 
+// "You're doing it, peter! You're assigning functions to variables!"
+
 /* It's important to note that variables that are declared within a function
 * cannot be accessed anywhere outside of that function. This is because that 
 * variable is defined with the scope of the function, not the global scope. 
@@ -92,7 +95,7 @@ let variableFunctionHybrid = function() {
 * You can create a closure by using a little term I've coined as function-ception. 
 * 
 */
-function giveMeanOriginalCompliment (firstName, adjective) {
+function giveMeAnOriginalCompliment (firstName, adjective) {
 //above we are creating our function, which will take our first name and adjective. 
     var finalStatement = "You are very ";
 //prepping a variable to help with our final output
@@ -104,7 +107,7 @@ function giveMeanOriginalCompliment (firstName, adjective) {
     return addArgs();
 }
 //calling the function
-giveMeanOriginalCompliment("Arin", "beautiful");
+giveMeAnOriginalCompliment("Arin", "beautiful");
 /*  The following will result in:
 *
 * "You are very beautiful, Arin!"

@@ -17,12 +17,13 @@
 * loop. The first determines where the loop will start, the second when it
 * will end, and the last expressions details what to do next. Always be sure
 * to begin your for loop with the denotation "for", followed by a set of 
-* parenthesis. Then be even more sure to end it with a statment. 
+* parenthesis. Then be even more sure to end it with a statment or command 
+* of some sort. 
 * 
 * Here's a visual example of what I'm trying to get accross:
 *
 *for([start];[end];[next]) {
-* statement;
+* statement/command;
 *}
 *
 * Now that you have an idea on the concepts, let's see one in action. 
@@ -121,7 +122,7 @@ for(let i = myArray.length - 1; i >= 0; i--){
 * Now let's see one of these beauties in the wild! Croikey!
 */ 
 var crocHunterObject= {  // creation of an test object with
-    firstName: "Steve",  // an honestly outdated reference. RIP. 
+    firstName: "Steve",  // an honestly outdated reference.  
     lastName: "Irwin"
 }
 for(let i in crocHunterObject){
@@ -139,20 +140,20 @@ for(let i in crocHunterObject){
 * Rest in peace, king. 
 * Before moving on, it's important to note that if you wanted to only print the 
 * key instead of the value, you would simply print i to the console instead, as the loop
-* is technically using the property itself to sort through the object. 
+* is technically using the first half of the property to sort through the object. 
 *
 * Before moving on to while loops, I think it's worth mentioning that you can certainly
-* put an array into a for in loop, but unfortuneatly you'll only be able to access the 
+* put an array into a for in loop, but you'll only be able to access the 
 * the indexed positions, not the values themselves. Tough break, kid. 
 *
 * The While Loop:
 *
 * Deceptively simple when compared to it's siblings, the while loop is used for 
-* executing predetermined statments WHILE  some condition is true. It uses very 
+* executing predetermined statments WHILE some condition is true. It uses very 
 * similar syntax as the other two, like so:
 *
 * while (condition){
-*     statement;
+*     statement/command;
 *}
 *
 * It's very important to note that within those parenthesis, a boolean, or true/false
@@ -161,11 +162,11 @@ for(let i in crocHunterObject){
 *
 * Well that's it, pack it up. We're done here. 
 *
-*...
+* ...
 *
-*.....
+* .....
 *
-* Wait, you want an example? 
+* What, you want an example? 
 *
 * Ugh. Fine. Just don't say I never did anything for you. 
 */
@@ -176,12 +177,14 @@ while (dogs < 10) {
 //while dogs is less than ten
     console.log("That's not Enough dogs, friend.");
 //remind our reader that they need more dogs
-    dogs++; //then give them more dogs until they have enough dogs. 
-//
+    dogs++; 
+    //then give them more dogs until they have enough dogs. 
 }
 /*The following will result in our programed response, because our condition, 
 * dogs < 10, is true, but without the "dogs++" after that log our program would
 * be stuck in a never ending loop, because that's simply not enough dogs, friend. 
+* And it never will be until we give you some more or change our standard for 
+* ideal dog ownership, which is a full on dealbreaker for me personally. 
 * 
 * Once the condition is proven to be true the loop will stop, and you'll have the 
 * right about of dogs once and for all. 
